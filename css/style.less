@@ -9,10 +9,19 @@
   background-color: #fff;
 }
 
+button:focus {
+    outline: none;
+}
+
 header {
   position: relative;
-  background: url("../images/slider-img.png") no-repeat 100% 100%;
   min-height: 800px;
+}
+
+.slider__top {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .active {
@@ -22,7 +31,11 @@ header {
 }
 
 .header__top {
-  padding-top: 63px;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  z-index: 1;
 }
 
 .logo {
@@ -54,15 +67,16 @@ header {
   &-link:hover {
     color: #212121 !important;
     border-bottom: 3px solid #212121;
-    padding-bottom: -3px;
   }
 
   &-item > span {
     cursor: pointer;
   }
 }
+/* Navigation end */
 
 .descripton {
+  z-index: 1;
   display: block;
   position: absolute;
   margin-left: 0;
@@ -124,6 +138,7 @@ header {
   }
 }
 
+/* Description modifiers */
 .blue {
   color: #1e88e5 !important;
 }
@@ -141,31 +156,13 @@ header {
   font-weight: 700;
 }
 
-.sliderDots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  display: flex;
-  align-items: center;
-}
-
-.span {
-  width: 30px;
-  height: 30px;
-  background-color: rgba(33, 33, 33, 0.2);
-  border-radius: 50%;
-  margin: 0 10px;
-
-  &__active {
-    width: 40px;
-    height: 40px;
-    background-color: #212121;
-  }
-}
-
+/* First section */
 .features {
+display: block;
+width: 100%;
+
   &__nav {
-    margin-top: 120px;
+    margin-top: 0px;
   }
 
   &__list {
@@ -188,7 +185,6 @@ header {
     margin-left: auto;
 
     &:hover {
-      text-decoration: none;
       color: #212121;
       text-decoration: underline #212121;
     }
@@ -231,7 +227,9 @@ header {
   }
 }
 
+/* Second section */
 .features-2 {
+  display: block;
   width: 100%;
 
   &__goods {
@@ -251,11 +249,12 @@ header {
     margin-left: 50px;
   }
 }
-
+/* Third section */
 .features-3 {
   display: block;
   padding: 0 14%;
   width: 100%;
+  margin-top: 120px;
 }
 
 .trendProduct {
@@ -270,50 +269,46 @@ header {
   }
 }
 
-// .slider {
-//   position: relative;
-//   margin-top: 120px;
-//   width: 100%;
-//   display: block;
-//
-//   &__img {
-//     display: block;
-//     position: relative;
-//     width: 100%;
-//   }
-
-  .slider {
-    margin-top: -10px;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 100%;
-  }
-
+/* Slider section */
+.slider__down {
+  position: relative;
+  margin-top: 120px;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  display: block;
+}
   .slider div img {
     margin: auto;
     max-width: 100%;
   }
 
   .slick-dots {
-    bottom: 80px;
-  }
+  position: absolute;
+  bottom: 20px;
+}
 
+.slick-dots li {
+  margin: 0 15px;
+}
   .slick-dots li button:before {
-    font-size: 10px;
-    color: rgba(255, 255, 255, 0.2);
+    font-size: 35px;
+    color: rgba(33, 33, 33, 0.2);
   }
 
   .slick-dots li.slick-active button:before {
-    color: white;
+    color: #212121;
+    font-size: 40px;
   }
 
   .descripton {
+    position: absolute;
+    z-index: 1;
     margin-left: 50px;
   }
 
-
+/* Fifth section */
 .features-4 {
   margin-top: 120px;
 
@@ -345,6 +340,7 @@ header {
   }
 }
 
+/* Mobile store adv */
 .mobileApp {
   padding-left: 100px;
   position: relative;
@@ -363,6 +359,7 @@ header {
 margin: 33px 10px 0 0;
 }
 
+/* Footer */
 .footer {
   position: relative;
   width: 100%;
@@ -472,18 +469,19 @@ input[type="submit"] {
   text-decoration: none;
 }
 
-#fb {
+/* Social links */
+#fb {  /* Facebook */
   background: url("../images/social-links.png") no-repeat 0 100%;
 }
 
-#tw {
+#tw {  /* Tweeter */
   background: url("../images/social-links.png") no-repeat 34% 100%;
 }
 
-#g {
+#g {  /* Google+ */
   background: url("../images/social-links.png") no-repeat 67% 100%;
 }
 
-#p {
+#p {  /* Pinterest */
   background: url("../images/social-links.png") no-repeat 100% 100%;
 }
