@@ -10,4 +10,17 @@ $(function() {
     speed: 1000,
     dots: true
   });
+
+  $('.slider-top').slick({
+    slidesToShow: 1,
+    arrows: false,
+    asNavFor: '.slider-bottom'
+  });
+
+  $('.slider-bottom').slick({
+    slidesToShow: 3,
+    arrows: false,
+    asNavFor: '.slider-top',
+    focusOnSelect: true
+  });
 });
